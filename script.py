@@ -33,6 +33,6 @@ def aggregate(input_dir, output_path):
             md.write(content)
 
 
-input_dir = "D:\\prep\\coding-interview-patterns-main\\python3"
-output_path = "D:\\prep\\coding-interview-patterns-main\\python_markdowns"
+input_dir = input("Location were all the python files locates: ")
+output_path = input("Location to save all the md files : ")
 aggregate(input_dir, output_path)
