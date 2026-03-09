@@ -23,9 +23,7 @@ def aggregate(input_dir, output_path):
         for j, file in enumerate(files):
             with file.open("r", encoding="utf-8") as f:
                 content += f"## {file_names[j]} \n"
-                content += "\n```python\n"
-                content += f.read()
-                content += "\n```\n"
+                content += f"\n```python\n  {f.read()}  \n```\n"
 
         # Write the aggregated content to a Markdown file
         output_file = output_path + "\\" + dir_names[i] + ".md"
@@ -36,3 +34,4 @@ def aggregate(input_dir, output_path):
 input_dir = input("Location were all the python files locates: ")
 output_path = input("Location to save all the md files : ")
 aggregate(input_dir, output_path)
+
